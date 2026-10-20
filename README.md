@@ -37,25 +37,25 @@ ZMP는 지지면 위에서 로봇의 관성력과 중력이 만드는 모멘트�
 
 Projection Polygon을 지면 좌표계에 투영한 영역(Turnover Stability Space)의 경계 $X_u, X_l, Y_u, Y_l$ 과 Modified ZMP 사이 거리로 지표를 정의합니다 (Lee et al., 2009).
 
-$$
-S_{au} = \frac{1}{2}\left\{1 - \frac{g}{a_{max}\,h}\left(ZMP_x - X_u\right)\right\},\qquad
-S_{al} = \frac{1}{2}\left\{1 + \frac{g}{a_{max}\,h}\left(ZMP_x - X_l\right)\right\}
-$$
+```math
+S_{au} = \frac{1}{2}\left\lbrace 1 - \frac{g}{a_{max} h}\left(ZMP_x - X_u\right)\right\rbrace ,\qquad
+S_{al} = \frac{1}{2}\left\lbrace 1 + \frac{g}{a_{max} h}\left(ZMP_x - X_l\right)\right\rbrace
+```
 
-$$
-S_{wu} = \frac{1}{2}\left\{1 - \frac{g}{(v\omega)_{max}\,h}\left(ZMP_y - Y_u\right)\right\},\qquad
-S_{wl} = \frac{1}{2}\left\{1 + \frac{g}{(v\omega)_{max}\,h}\left(ZMP_y - Y_l\right)\right\}
-$$
+```math
+S_{wu} = \frac{1}{2}\left\lbrace 1 - \frac{g}{(v\omega)_{max} h}\left(ZMP_y - Y_u\right)\right\rbrace ,\qquad
+S_{wl} = \frac{1}{2}\left\lbrace 1 + \frac{g}{(v\omega)_{max} h}\left(ZMP_y - Y_l\right)\right\rbrace
+```
 
-$$
+```math
 S_a = \min(S_{au}, S_{al}),\qquad S_w = \min(S_{wu}, S_{wl})
-$$
+```
 
 <p align="center"><img src="docs/images/tsi_regions.png" width="300" alt="TSI 영역"></p>
 
 - $S_a$ 는 전후 방향(선가속도), $S_w$ 는 좌우 방향(속도 × 회전 각속도, 즉 구심가속도)의 여유를 나타냅니다.
 - ZMP가 지지 영역 경계에 있으면 $S = 1/2$ 입니다. 이보다 작으면 ZMP가 지지 영역 밖에 있다는 뜻입니다.
-- $S_{wu} < 0$ 이면 좌측, $S_{wl} < 0$ 이면 우측으로 넘어질 가능성이 큽니다.
+- $S_{wu}$ < 0 이면 좌측, $S_{wl}$ < 0 이면 우측으로 넘어질 가능성이 큽니다.
 
 ### 3. 전복 방지 제어
 
