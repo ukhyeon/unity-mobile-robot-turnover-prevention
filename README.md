@@ -145,7 +145,7 @@ Assets/
 | `Steer()` | PD 조향각 계산과 위험 단계별 조향 평활화 |
 | `LogRobotData()` | 자세, 속도·가속도·각속도, TSI를 텍스트 파일로 기록 |
 
-ZMP·TSI 식을 먼저 검토할 때 쓴 MATLAB 코드는 [2024Capstone](https://github.com/ukhyeon/2024Capstone)의 `ZMP_Calculation/`에 있습니다. 같은 프로젝트에서 만든 경로계획 알고리즘(Bug, Dijkstra, A\*, RRT, RRT\*) 시각화는 [unity-mobile-robot-path-planning](https://github.com/ukhyeon/unity-mobile-robot-path-planning)으로 분리했습니다.
+ZMP·TSI 식을 먼저 검토할 때 쓴 MATLAB 코드는 [2024Capstone](https://github.com/ukhyeon/2024Capstone)의 `ZMP_Calculation/`에 있습니다. 이 저장소에는 프로젝트가 끝난 뒤 같은 Unity 환경에서 개인 프로젝트로 진행한 경로계획 알고리즘(Bug, Dijkstra, A\*, RRT, RRT\*) 시각화 씬도 들어 있습니다. 이 부분은 [unity-mobile-robot-path-planning](https://github.com/ukhyeon/unity-mobile-robot-path-planning)으로 따로 분리했습니다.
 
 ## 팀
 
